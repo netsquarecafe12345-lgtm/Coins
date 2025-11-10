@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Coinsbitexchange — Demo</title>
+  <title>Coinsbitexchange â€” Demo</title>
   <style>
     :root{
       --bg:#f6f8fb;
@@ -112,7 +112,7 @@
       <div class="logo">CB</div>
       <div>
         <div class="title">Coinsbitexchange</div>
-        <div class="subtitle">Demo crypto exchange • light theme • fake data</div>
+        <div class="subtitle">Demo crypto exchange â€¢ light theme â€¢ fake data</div>
       </div>
     </div>
 
@@ -141,11 +141,11 @@
         <div style="display:flex;justify-content:space-between;align-items:center">
           <div>
             <div class="small muted">Last price</div>
-            <div class="price" id="lastPrice">—</div>
+            <div class="price" id="lastPrice">â€”</div>
           </div>
           <div style="text-align:right">
             <div class="small muted">24h Change</div>
-            <div id="pctChange" class="change up">—</div>
+            <div id="pctChange" class="change up">â€”</div>
           </div>
         </div>
 
@@ -161,7 +161,7 @@
     <div class="card">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
         <div style="font-weight:800" id="pairTitle">BTC / USDT</div>
-        <div class="small muted">Order Book • Trades • Demo</div>
+        <div class="small muted">Order Book â€¢ Trades â€¢ Demo</div>
       </div>
 
       <div style="display:grid;grid-template-columns:1fr 320px;gap:12px;">
@@ -185,9 +185,9 @@
               </div>
             </div>
             <div class="balances" id="balances">
-              BTC: <strong id="balCoin">0.5000</strong> • USDT: <strong id="balUsdt">5000.00</strong>
+              BTC: <strong id="balCoin">0.5000</strong> â€¢ USDT: <strong id="balUsdt">5000.00</strong>
             </div>
-            <div class="footer-note">This is a simulated demo — no real funds move.</div>
+            <div class="footer-note">This is a simulated demo â€” no real funds move.</div>
           </div>
         </div>
 
@@ -284,7 +284,7 @@
       Object.values(markets).forEach(m=>{
         const btn = document.createElement('button');
         btn.className = 'pair' + (m.symbol===state.selected ? ' active' : '');
-        btn.textContent = `${m.symbol} • ${fmt(m.price, (m.symbol.startsWith('BTC')?0:2))}`;
+        btn.textContent = `${m.symbol} â€¢ ${fmt(m.price, (m.symbol.startsWith('BTC')?0:2))}`;
         btn.onclick = ()=>{ state.selected = m.symbol; refreshAll(); }
         pairListEl.appendChild(btn);
       });
@@ -353,8 +353,8 @@
       const maxAmount = Math.max(...state.orderBook.bids.map(x=>x.amount), ...state.orderBook.asks.map(x=>x.amount)) || 1;
       const frag = document.createDocumentFragment();
       for(let i=0;i<5;i++){
-        const b = state.orderBook.bids[i] || {price:'—',amount:0};
-        const a = state.orderBook.asks[i] || {price:'—',amount:0};
+        const b = state.orderBook.bids[i] || {price:'â€”',amount:0};
+        const a = state.orderBook.asks[i] || {price:'â€”',amount:0};
         const row = document.createElement('div');
         row.style.display='flex';
         row.style.justifyContent='space-between';
@@ -510,7 +510,7 @@
        Interaction handlers
        --------------------------- */
     document.getElementById('connectBtn').addEventListener('click', ()=>{
-      alert('Demo wallet connected — this is a simulation.');
+      alert('Demo wallet connected â€” this is a simulation.');
     });
 
     // trade tabs
