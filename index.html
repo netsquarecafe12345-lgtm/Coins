@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Coinsbitexchange — Demo</title>
+  <title>Coinsbitexchange — </title>
   <style>
     :root{
       --bg:#f6f8fb;
@@ -15,7 +15,24 @@
       --glass: rgba(255,255,255,0.7);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    *{box-sizing:border-box}
+    *{box-sizing:border-box} 
+	  <!-- Login Form -->
+<div id="login-container" style="width:300px; margin:50px auto; padding:20px; border:1px solid #ccc; border-radius:8px; background:#f9f9f9;">
+  <h2 style="text-align:center;">Login</h2>
+  <form id="login-form">
+    <div style="margin-bottom:10px;">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" name="username" style="width:100%; padding:8px;" required>
+    </div>
+    <div style="margin-bottom:10px;">
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" style="width:100%; padding:8px;" required>
+    </div>
+    <button type="submit" style="width:100%; padding:10px; background:#007bff; color:#fff; border:none; border-radius:4px;">Login</button>
+  </form>
+  <p id="login-message" style="color:red; text-align:center; margin-top:10px;"></p>
+</div>
+
     body{
       margin:0;
       background: linear-gradient(180deg, #f6f8fb 0%, #ffffff 100%);
@@ -583,4 +600,5 @@ window.smartsupp||(function(d) {
 
 </body>
 </html>
+
 
